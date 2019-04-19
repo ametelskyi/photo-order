@@ -1,0 +1,25 @@
+syntax: glob
+**.log
+
+build
+target
+logs
+out
+tmp
+
+.idea
+.gradle
+.mvn
+
+**.iws
+**.gradle
+**.iml
+**.ipr
+**.class
+
+**.jar
+**.war
+
+**.bak
+**.orig
+*~
