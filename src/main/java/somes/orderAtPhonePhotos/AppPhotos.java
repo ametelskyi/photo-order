@@ -26,8 +26,8 @@ import static java.util.stream.Stream.concat;
  */
 
 public class AppPhotos {
-    private static final String COPY_FROM_PATH = "/home/anme/FOR_SORTING_ALL/fotoToJava/";
-    private static final String COPY_TO_PATH = "/home/anme/FOR_SORTING_ALL/PARSED_BY_ME/";
+    private static final String COPY_FROM_PATH = "/home/anme/FOR_SORTING_ALL/video_android/";
+    private static final String COPY_TO_PATH = "/home/anme/FOR_SORTING_ALL/vid/";
 
     // I format DCIM format
 //        20151008_102109.jpg
@@ -68,6 +68,17 @@ public class AppPhotos {
     }
 
     private static void sortAllNames(File[] listOfFiles) throws IOException {
+
+        //todo for VIDEO w-p
+//        for (File file : listOfFiles) {
+//            if(file.getName().startsWith("VID")) {
+//                System.out.println(file.getName() + " === " + file.getName().substring(4));
+//                file.renameTo(new File(file.getName().substring(4)));
+//            }
+//        }
+//        if(1==1) return;
+
+
         Set<File> namesDCIM = new TreeSet<>(File::compareTo);
         Set<File> namesStrangeViber = new TreeSet<>(File::compareTo);
         Set<File> namesWatsapp = new TreeSet<>(File::compareTo);

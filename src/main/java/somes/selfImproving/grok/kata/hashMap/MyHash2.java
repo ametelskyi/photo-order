@@ -1,4 +1,4 @@
-package somes.selfImproving.grok;
+package somes.selfImproving.grok.kata.hashMap;
 
 /**
  * Created by anme on 10.12.18.

@@ -1,0 +1,249 @@
+{
+  "userData": {
+    "user": "SZ7063",
+    "station": "SZBAD60",
+    "tokenData": {
+      "sub": "SZ7063",
+      "lastName": "COBAN",
+      "org": "SZ",
+      "user_name": "SZ7063",
+      "authorities": [
+        "STATION_REPORTING_ROLE",
+        "SZBAD60::incidentReport",
+        "SZBAD60::return",
+        "SZBAD60::idleSighting"
+      ],
+      "client_id": "employee-web-portal",
+      "tasId": "7063",
+      "firstName": "HUESEYIN",
+      "aud": [
+        "master-data",
+        "user-info",
+        "script-support"
+      ],
+      "scope": [
+        "services-external"
+      ],
+      "exp": 1551965886,
+      "parameters": null,
+      "jti": "edca4e07-0a7f-456d-b9c9-f65981862876"
+    }
+  },
+  "signature": {
+    "email": "AZHANR@GMAIL.COM",
+    "denialReason": "NotPresentOther",
+    "absenceReasonOther": "",
+    "vehicleMoved": false,
+    "printCheckinSlip": true
+  },
+  "calculatedIncidents": {
+    "incidents": [
+      {
+        "country": "CH",
+        "date": "2019-02-04T23:00:00Z",
+        "description": "kunde hat einen pfosten angefahren",
+        "driver": "BIN ABDUL  RAHMAN",
+        "driverText": "",
+        "eas": false,
+        "grossNegligence": false,
+        "location": "parkhaus in luzern",
+        "piClaim": false,
+        "thirdParties": [],
+        "thirdParty": false,
+        "witnesses": []
+      }
+    ]
+  },
+  "nonCalculatedIncidents": {},
+  "rentalAgreement": {
+    "errors": [],
+    "warnings": [],
+    "flags": [],
+    "unitNumber": 3897469,
+    "vin": "YV1MV72V0K2575595",
+    "licenseCountry": "SZ",
+    "customerOrderNumber": "",
+    "additionalAccessories": [
+      {
+        "name": "neverlostIndicator",
+        "value": false
+      },
+      {
+        "name": "babyseatIndicator",
+        "value": false
+      },
+      {
+        "name": "skiRentIndicator",
+        "value": false
+      },
+      {
+        "name": "snowEquipmentIndicator"
+      },
+      {
+        "name": "hertzMuliMediaIndicator",
+        "value": false
+      },
+      {
+        "name": "mobilePhoneIndicator",
+        "value": false
+      }
+    ],
+    "superCover": false,
+    "modelCode": "UN14",
+    "modelName": "VO V40 20 DAFY",
+    "manufacturerName": "VOLVO",
+    "tp": true,
+    "vehicleTankCapacity": 62,
+    "blockingStatus": "",
+    "pers": false,
+    "checkinLoc": "SZBAD60",
+    "checkinDate": "2019-02-08T18:00:00+01:00",
+    "customerEmail": "AZHANR@GMAIL.COM",
+    "checkoutLoc": "SZBAD60",
+    "mileageOut": 569,
+    "tankCapacity": 62,
+    "cdpNumber": "99",
+    "nweAmount": 2000,
+    "vehicleOwnerCountryCode": "SZ",
+    "license": "AI31243",
+    "checkoutDate": "2019-01-30T09:45:00+01:00",
+    "rentDate": "2019-01-30T09:45:00+01:00",
+    "gtCoverage": false,
+    "customerName": "VITALIS MAKAJIL ANNALAINE",
+    "cdwIndicator": true,
+    "goldService": false,
+    "notesList": [],
+    "raNumber": 357688236,
+    "addDriver": "BIN ABDUL  RAHMAN",
+    "distanceByLiter": 22,
+    "address": {
+      "addressLine1": "SPITZMATTSTRASSE 45A",
+      "addressLine2": "WINDISCH",
+      "addressLine3": "",
+      "postalCode": "5210",
+      "countryCode": "SZ"
+    },
+    "fuelType": "D",
+    "carGroupRented": "R",
+    "pi": false,
+    "fpoFlag": false,
+    "collection": false,
+    "deliveryAddress": {
+      "deliveryArea": "",
+      "deliveryZipCode": "",
+      "deliveryCountry": "",
+      "deliveryAddress2": "",
+      "deliveryAddress3": "",
+      "deliveryAddress1": ""
+    },
+    "collectionAddress": {
+      "collectionArea": "",
+      "collectionZipCode": "",
+      "collectionCountry": "",
+      "collectionAddress1": "",
+      "collectionAddress2": "",
+      "collectionAddress3": ""
+    },
+    "miscAdditionsList": [],
+    "miscDeductionsList": []
+  },
+  "additionalCharges": {},
+  "checkin": {
+    "checkinDate": "2019-02-07T14:38:59.395+01:00",
+    "customerNotPresent": true
+  },
+  "vehicleCoreData": {
+    "vin": "YV1MV72V0K2575595",
+    "unitNumber": 3897469,
+    "licensePlate": "AI31243",
+    "carGroup": "R",
+    "modelCode": "UN14",
+    "ownerCountry": "SZ",
+    "pictogram": "4-door.svg"
+  },
+  "vehicleAdditionalData": {
+    "model": "VO V40 20 DAFY",
+    "manufacturer": "VOLVO",
+    "fuelType": "D",
+    "metallic": false,
+    "van": false
+  },
+  "vehicleAccessories": {
+    "additionalAccessories": [],
+    "accessories": []
+  },
+  "vehicleEquipment": {},
+  "technicalFaults": {},
+  "vehicleDamages": {
+    "damages": [
+      {
+        "area": "Front",
+        "customerFault": true,
+        "group": "R",
+        "modelCode": "UN14",
+        "photos": [
+          "09aa7289-bcdc-447f-abc8-c6bb1b9f3ced",
+          "ea0be491-4b35-463a-8fde-4089f6ed3ffc"
+        ],
+        "piece": "Bumper",
+        "severity": "Replace",
+        "status": "new",
+        "type": "Crack",
+        "x": 474,
+        "y": 229
+      }
+    ],
+    "matrixVersion": "SZDamageMatrix_January2019_V3"
+  },
+  "fueling": {
+    "previousMileage": 569,
+    "previousFuel": "8",
+    "tasMileage": 569,
+    "distanceByLiter": 22,
+    "vehicleTankCapacity": 62,
+    "mileage": 1315,
+    "customerRefuelled": true,
+    "fuel": "8",
+    "mileageSinceRefueling": 1,
+    "receiptPhotos": []
+  },
+  "mileage": {
+    "previousMileage": 569,
+    "previousFuel": "8",
+    "tasMileage": 569,
+    "distanceByLiter": 22,
+    "vehicleTankCapacity": 62,
+    "mileage": 1315,
+    "customerRefuelled": true,
+    "fuel": "8",
+    "mileageSinceRefueling": 1,
+    "receiptPhotos": []
+  },
+  "overviewPhoto": {},
+  "documents": [
+    "DAR-3897469-357688236!24a2bc78-5077-411b-858e-0c97bc94699d"
+  ],
+  "errors": [
+    "7046 - raNumber:RA already closed"
+  ],
+  "warnings": null,
+  "ref": "SZBAD60201902009866",
+  "incidentPhotos": {
+    "furtherDocuments": {
+      "photos": [
+        "bedafb6e-6623-47d0-bbe0-a85f2d15de94"
+      ]
+    },
+    "milometer": {
+      "photos": [
+        "110d2e2a-4c07-43ee-bb86-1051b637a8e7"
+      ]
+    },
+    "registration": {
+      "photos": [
+        "204cbe34-0983-4f5b-bace-b20c7ecde91c"
+      ]
+    }
+  },
+  "charges": {}
+}

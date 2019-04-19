@@ -1,20 +1,10 @@
-package somes.selfImproving.grok;
+package somes.selfImproving.grok.kata.binarySearch;
 
 /**
  * Created by anme on 08.08.18.
  */
-public class BinSearch2 {
-    public static void main(String[] args) {
-        int[] arr = new int[]{34, 56, 78, 94, 56};
-        if(binSearch(arr, 78) != 2) {
-            throw new RuntimeException("WRONG");
-        }
-        if(binSearch(arr, 79) != -1) {
-            throw new RuntimeException("WRONG");
-        }
-    }
-
-    private static int binSearch(int[] arr, int wantToFind) {
+public class BinarySearch2  implements IBinarySearch {
+    public int binarySearch(int[] arr, int wantToFind) {
         int low = 0;
         int high = arr.length -1;
 

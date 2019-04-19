@@ -1,4 +1,4 @@
-package somes.selfImproving.grok;
+package somes.selfImproving.grok.kata.hashMap;
 
 import javafx.util.Pair;
 

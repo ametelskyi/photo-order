@@ -1,26 +1,12 @@
-package somes.selfImproving.grok;
+package somes.selfImproving.grok.kata.binarySearch;
 
 
 /**
  * Created by anme on 02.08.18.
  */
-public class BinarySearch {
+public class BinarySearch1 implements IBinarySearch {
 
-    public static void main(String[] args) {
-
-
-        int[] arr = new int[]{51,52,53,54,55,56,57,58};
-
-        int whatWeWantToFind = 57;
-        int index = binarySearch(arr, whatWeWantToFind);
-
-        System.out.println(index);
-        if(index != 6) {
-            throw new RuntimeException("!!!");
-        }
-    }
-
-    private static int binarySearch(int[] arr, int whatWeWantToFind) {
+    public int binarySearch(int[] arr, int whatWeWantToFind) {
         int lowBoundary = 0;
         int highBoundary = arr.length -1;
 

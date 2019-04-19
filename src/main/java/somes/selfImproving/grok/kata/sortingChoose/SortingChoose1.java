@@ -1,20 +1,12 @@
-package somes.selfImproving.grok;
+package somes.selfImproving.grok.kata.sortingChoose;
 
 import java.util.Arrays;
 
 /**
  * Created by anme on 29.08.18.
  */
-public class SortingChoose {
-    public static void main(String[] args) {
-        int[] arr = new int[]{234, 23, -555, 113, 56, -56, 2, 55};
-
-        int[] sorted = sortIt(arr);
-
-        System.out.println(Arrays.toString(sorted));
-    }
-
-    private static int[] sortIt(int[] arr) {
+public class SortingChoose1 implements ISortingChoose {
+    public int[] sortChoose(int[] arr) {
         int[] sorted = new int[arr.length];
         while(arr.length > 0) {
             int smallestIndex = findSmallestIndex(arr);

@@ -1,4 +1,4 @@
-package somes.selfImproving.grok;
+package somes.selfImproving.grok.kata.travelingSalesman;
 
 import java.util.ArrayList;
 import java.util.List;

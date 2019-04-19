@@ -1,0 +1,240 @@
+import {Component, OnInit} from "@angular/core";
+import {DataService} from "../../../services/cm-data.service";
+import {CmBaseSelectElement} from "../base-element/cm-base-select-element.component";
+import {CmConfigModelService, CmFieldChangeData} from "../../../services/cm-config-model.service";
+import {ProcessUtils} from "../../cm-process/cm-process-utils";
+import {CmFormGeneratorComponent} from "../cm-form-generator.component";
+import {CmDamageDataService} from "../../../services/cm-damage-matrix.service";
+import {CmTranslation} from "../../../services/cm-translate.service";
+
+@Component({
+selector: 'cm-checkboxlist',
+template: require('./cm-checkboxlist.component.html')
+})
+export class CmCheckboxListComponent extends CmBaseSelectElement implements OnInit {
+
+private dataHolder: any = {};
+
+constructor(dataService: DataService,
+model: CmConfigModelService,
+private form: CmFormGeneratorComponent,
+private translate: CmTranslation,
+damageMatrix: CmDamageDataService) {
+super(model, damageMatrix, dataService);
+form.addToElementList(this);
+
+let sub = this.model.fieldChange$.subscribe(
+data => this.processFieldChange(data)
+);
+
+this.subs.push(sub);
+}
+
+ngOnInit() {
+console.log('ON INIT');//todo console.log
+if(this.config.useDataList) {
+let data = this.model.getFieldValue(this.config.useDataList);
+this.fillData(data);
+} else if (this.config.dataSource) {
+this.dataService.returnLocalizedMap(this.config.dataSource).subscribe(
+data => {
+this.fillData(data)
+}
+)
+}
+}
+
+public setValue(value: any) {
+console.log('setValue()');//todo console.log
+this.dataHolder = ProcessUtils.getDataHolderFromOutObject(this.value = value);
+
+
+//todo
+let newItems = [];
+value.forEach(v => {
+let rnd = Math.random();
+console.log('rnd:' + rnd + '; name:' + v.name);//todo console.log
+newItems.push({"name": v.name, "text": v.name + "_TO_BE_TRANSLATED_"+rnd})
+});
+
+this.items = newItems;
+
+// this.items = this.getListFromData(value);
+
+
+// this.items = this.getRandomList();
+
+
+
+this.externalChange();
+}
+
+public clearValue() {
+console.log('clearValue!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');//todo console.log
+this.dataHolder = [];
+this.value = ProcessUtils.getDataHolderFromOutObject(this.items);
+this.externalChange();
+}
+
+
+
+private fillData(data) {
+// if (this.config.rulesDataSource) {
+//   this.fillFromRules(data);
+// } else {
+//   this.fillFromServer(data);
+// }
+
+console.log('55555555555555555555555');//todo console.log
+// this.items = this.getRandomList();
+
+//todo
+// this.dataHolder = ProcessUtils.getDataHolderFromOutObject(this.value = this.model.getFieldValue(this.config.id));
+this.dataHolder = ProcessUtils.getDataHolderFromOutObject(this.items);
+
+this.externalChange();
+}
+
+private fillFromRules(data) {
+let dataField = this.model.getFieldValue(this.config.rulesDataSource);
+if (dataField) {
+this.items = dataField;
+let pan = this;
+let prefix = this.config.useDataList
+? this.config.dataListLocalizationPrefix + '.list.'
+: this.config.dataSource + '.list.';
+
+//merge localization data with rules data
+this.items.map(function (e) {
+e.text = pan.translate.getTranslation(prefix + e.name);
+return e;
+});
+this.dataHolder = ProcessUtils.getDataHolderFromOutObject(this.value = dataField);
+}
+}
+
+private getLocalizedText(localizedData, name) {
+for (let localizedItem of localizedData) {
+if (localizedItem.name === name) {
+return localizedItem.text;
+}
+}
+return name;
+}
+
+private fillFromServer(data) {
+this.items = data[this.getConfigDataSource()];
+this.dataHolder = ProcessUtils.getDataHolderFromOutObject(this.value = this.model.getFieldValue(this.config.id));
+}
+
+// private change() {
+//   console.log('change()!!!!!');//todo console.log
+//
+//   let out = ProcessUtils.createOutObject(this.items, this.dataHolder);
+//   this.model.setFieldValue(this.config.id, out);
+// }
+
+private internalChange() {
+console.log('internalChange!!!');//todo console.log
+let out = ProcessUtils.createOutObject(this.items, this.dataHolder);
+this.model.setFieldValue(this.config.id, out);
+}
+
+private externalChange() {
+console.log('externalChange!!!');//todo console.log
+let out = ProcessUtils.createOutObject(this.items, this.dataHolder);
+this.model.setFieldValue(this.config.id, out);
+}
+
+private processFieldChange(data: CmFieldChangeData) {
+console.log('processFieldChange!!!'); //todo console.log
+if (this.config.id === data.name) {
+this.dataHolder = ProcessUtils.getDataHolderFromOutObject(this.value = data.value);
+
+
+
+
+}
+}
+
+private checkShowIfEmpty() {
+return !(this.config.hideIfEmpty === true && this.items.length === 0);
+}
+
+private getConfigDataSource() {
+if(this.config.useDataList) {
+return this.config.useDataList;
+} else {
+return this.config.dataSource;
+}
+}
+
+private getListFromData(data:any){
+let newItems = [];
+data.forEach(v => {
+let rnd = Math.random();
+console.log('rnd:' + rnd + '; name:' + v.name);//todo console.log
+newItems.push({"name": v.name, "text": v.name + "_TO_BE_TRANSLATED_"+rnd})
+});
+return newItems;
+}
+
+private getRandomList():any {
+let l1 = [{
+name: "BrakesAAA11",
+text: "BrakesAAA11"
+},{
+name: "BrakesAAA22",
+text: "BrakesAAA22"
+},{
+name: "BrakesAAA33",
+text: "BrakesAAA33"
+}];
+let l2 = [{
+name: "BrakesBBB11",
+text: "BrakesBBB11"
+},{
+name: "BrakesBBB22",
+text: "BrakesBBB22"
+}];
+let l3 = [{
+name: "BrakesCCC",
+text: "BrakesCCC"
+}];
+let l4 = [{
+name: "Brakes44411",
+text: "Brakes44411"
+},{
+name: "Brakes44422",
+text: "Brakes44422"
+},{
+name: "Brakes44411",
+text: "Brakes44411"
+},{
+name: "Brakes44422",
+text: "Brakes44422"
+},{
+name: "Brakes44422",
+text: "Brakes44422"
+}];
+let l5 = [{
+name: "Brakes555555",
+text: "Brakes555555"
+},{
+name: "Brakes555555",
+text: "Brakes555555"
+},{
+name: "Brakes555555",
+text: "Brakes555555"
+},{
+name: "Brakes555555",
+text: "Brakes555555"
+},{
+name: "Brakes555555",
+text: "Brakes555555"
+}];
+let ls = [l1,l2,l3,l4,l5];
+
+return ls[Math.floor(Math.random() * 5)];
+}
+}

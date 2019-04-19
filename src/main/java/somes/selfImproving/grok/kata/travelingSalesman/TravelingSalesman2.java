@@ -1,42 +1,10 @@
-package somes.selfImproving.grok;
+package somes.selfImproving.grok.kata.travelingSalesman;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class TravelingSalesman2 {
     public static void main(String[] args) throws InterruptedException {
-
-
-        System.out.println(15&1);
-        System.out.println(15&2);
-        System.out.println(15&3);
-        System.out.println(15&4);
-        System.out.println(15&5);
-        System.out.println(15&6);
-        System.out.println(15&7);
-        System.out.println(15&12);
-        System.out.println(15&100);
-        System.out.println(15&1000);
-        System.out.println("---");
-        System.out.println(15&15);
-        System.out.println(15&16);
-        System.out.println(15&17);
-        System.out.println(15&18);
-        System.out.println(15&19);
-        System.out.println(15&20);
-        System.out.println(15&21);
-        System.out.println("---");
-        System.out.println(15 % 15);
-        System.out.println(16 % 15);
-        System.out.println(17 % 15);
-        System.out.println(18 % 15);
-        System.out.println(19 % 15);
-        System.out.println(20 % 15);
-        System.out.println(21 % 15);
-
-        String list = "abcdefghklmj";
-//        printAllVariants(list);
-
     }
 
     private static void printAllVariants(String list) throws InterruptedException {
