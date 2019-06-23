@@ -1,45 +1,109 @@
-ps aux | grep java
-root      3613  1.1 11.2 7188580 3705772 ?     Ssl  мар20  13:56 /usr/lib/jvm/java-1.8-openjdk/jre/bin/java -cp /var/lib/neo4j/plugins:/var/lib/neo4j/conf:/var/lib/neo4j/lib/*:/var/lib/neo4j/plugins/* -server -Xms1536m -Xmx1536m -Xloggc:/var/lib/neo4j/logs/gc.log -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=20m -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCApplicationStoppedTime -XX:+PrintPromotionFailure -XX:+PrintTenuringDistribution -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow -XX:+AlwaysPreTouch -XX:+UnlockExperimentalVMOptions -XX:+TrustFinalNonStaticFields -XX:+DisableExplicitGC -Djdk.tls.ephemeralDHKeySize=2048 -Dunsupported.dbms.udc.source=tarball -Dfile.encoding=UTF-8 org.neo4j.server.CommunityEntryPoint --home-dir=/var/lib/neo4j --config-dir=/var/lib/neo4j/conf
-anme      6117  4.4  7.3 8085032 2414712 ?     Sl   мар20  54:32 /home/anme/work/ide/idea-IU-183.5912.21/jre64/bin/java com.intellij.idea.Main
-anme      7087  0.0  0.6 3686576 202216 ?      Sl   мар20   0:51 /usr/lib/jvm/java-8-oracle/bin/java -Xmx700m -Djava.awt.headless=true -Djava.endorsed.dirs="" -Djdt.compiler.useSingleThread=true -Dpreload.project.path=/home/anme/work/workspaces/git/photo-order -Dpreload.config.path=/home/anme/.IntelliJIdea2018.3/config/options -Dcompile.parallel=false -Drebuild.on.dependency.change=true -Djava.net.preferIPv4Stack=true -Dio.netty.initialSeedUniquifier=-4443197636012289056 -Dfile.encoding=UTF-8 -Duser.language=en -Duser.country=US -Didea.paths.selector=IntelliJIdea2018.3 -Didea.home.path=/home/anme/work/ide/idea-IU-183.5912.21 -Didea.config.path=/home/anme/.IntelliJIdea2018.3/config -Didea.plugins.path=/home/anme/.IntelliJIdea2018.3/config/plugins -Djps.log.dir=/home/anme/.IntelliJIdea2018.3/system/log/build-log -Djps.fallback.jdk.home=/home/anme/work/ide/idea-IU-183.5912.21/jre64 -Djps.fallback.jdk.version=1.8.0_152-release -Dio.netty.noUnsafe=true -Djava.io.tmpdir=/home/anme/.IntelliJIdea2018.3/system/compile-server/qwe_438ff90/_temp_ -Djps.backward.ref.index.builder=true -Dkotlin.incremental.compilation=true -Dkotlin.daemon.enabled -Dkotlin.daemon.client.alive.path="/tmp/kotlin-idea-3122889564262438550-is-running" /home/anme/.IntelliJIdea2018.3/system/compile-server
-anme      7768  0.0  0.7 4148996 243292 ?      Sl   мар20   1:00 /home/anme/work/ide/idea-IU-183.5912.21/jre64/bin/java -Djava.awt.headless=true -Didea.version==2018.3.5 -Xmx768m -Didea.maven.embedder.version=3.3.9 -Dfile.encoding=UTF-8 org.jetbrains.idea.maven.server.RemoteMavenServer
-anme     15687 25.7  7.6 14209168 2520424 ?    Sl   14:04   2:06 /usr/lib/jvm/jdk-11.0.2/bin/java -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:39719,suspend=y,server=n -XX:TieredStopAtLevel=1 -noverify -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -javaagent:/home/anme/work/ide/idea-IU-183.5912.21/lib/rt/debugger-agent.jar -Dfile.encoding=UTF-8 de.checkmobile.ReportingApplication
-anme     16561  1.7  0.5 4268808 186920 ?      Sl   14:10   0:02 /usr/lib/jvm/jdk-11.0.2/bin/java -Xmx700m -Djava.awt.headless=true -Djdt.compiler.useSingleThread=true -Dpreload.project.path=/home/anme/work/workspaces/hertz/hertz-sql-reporting-service -Dpreload.config.path=/home/anme/.IntelliJIdea2018.3/config/options -Dcompile.parallel=false -Drebuild.on.dependency.change=true -Djava.net.preferIPv4Stack=true -Dio.netty.initialSeedUniquifier=-4443197636012289056 -Dfile.encoding=UTF-8 -Duser.language=en -Duser.country=US -Didea.paths.selector=IntelliJIdea2018.3 -Didea.home.path=/home/anme/work/ide/idea-IU-183.5912.21 -Didea.config.path=/home/anme/.IntelliJIdea2018.3/config -Didea.plugins.path=/home/anme/.IntelliJIdea2018.3/config/plugins -Djps.log.dir=/home/anme/.IntelliJIdea2018.3/system/log/build-log -Djps.fallback.jdk.home=/home/anme/work/ide/idea-IU-183.5912.21/jre64 -Djps.fallback.jdk.version=1.8.0_152-release -Dio.netty.noUnsafe=true -Djava.io.tmpdir=/home/anme/.IntelliJIdea2018.3/system/compile-server/hertz-sql-reporting-service_333954b/_temp_ -Djps.backward.ref.index.builder=true -Dkotlin.incremental.compilation=true -Dkotlin.daemon.enabled -Dkotlin.daemon.client.alive.path="/tmp/kotlin-idea-3122889564262438550-is-running" /home/anme/.IntelliJIdea2018.3/system/compile-server
-anme     16978  0.0  0.0  15448   928 pts/21   S+   14:12   0:00 grep --color=auto java
-anme     21657  0.0  0.5 4268808 185624 ?      Sl   мар20   0:57 /usr/lib/jvm/jdk-11.0.2/bin/java -Xmx700m -Djava.awt.headless=true -Djdt.compiler.useSingleThread=true -Dpreload.project.path=/home/anme/work/workspaces/hertz/vehicle-information-service -Dpreload.config.path=/home/anme/.IntelliJIdea2018.3/config/options -Dcompile.parallel=false -Drebuild.on.dependency.change=true -Djava.net.preferIPv4Stack=true -Dio.netty.initialSeedUniquifier=-4443197636012289056 -Dfile.encoding=UTF-8 -Duser.language=en -Duser.country=US -Didea.paths.selector=IntelliJIdea2018.3 -Didea.home.path=/home/anme/work/ide/idea-IU-183.5912.21 -Didea.config.path=/home/anme/.IntelliJIdea2018.3/config -Didea.plugins.path=/home/anme/.IntelliJIdea2018.3/config/plugins -Djps.log.dir=/home/anme/.IntelliJIdea2018.3/system/log/build-log -Djps.fallback.jdk.home=/home/anme/work/ide/idea-IU-183.5912.21/jre64 -Djps.fallback.jdk.version=1.8.0_152-release -Dio.netty.noUnsafe=true -Djava.io.tmpdir=/home/anme/.IntelliJIdea2018.3/system/compile-server/vehicle-information-service_2880f5d9/_temp_ -Djps.backward.ref.index.builder=true -Dkotlin.incremental.compilation=true -Dkotlin.daemon.enabled -Dkotlin.daemon.client.alive.path="/tmp/kotlin-idea-3122889564262438550-is-running" /home/anme/.IntelliJIdea2018.3/system/compile-server
-anme     24541  0.0  0.5 3686576 194252 ?      Sl   мар20   0:48 /usr/lib/jvm/java-8-oracle/bin/java -Xmx700m -Djava.awt.headless=true -Djava.endorsed.dirs="" -Djdt.compiler.useSingleThread=true -Dpreload.project.path=/home/anme/work/workspaces/hertz/rest-test -Dpreload.config.path=/home/anme/.IntelliJIdea2018.3/config/options -Dexternal.project.config=/home/anme/.IntelliJIdea2018.3/system/external_build_system/rest-test.e18096bb -Dcompile.parallel=false -Drebuild.on.dependency.change=true -Djava.net.preferIPv4Stack=true -Dio.netty.initialSeedUniquifier=-4443197636012289056 -Dfile.encoding=UTF-8 -Duser.language=en -Duser.country=US -Didea.paths.selector=IntelliJIdea2018.3 -Didea.home.path=/home/anme/work/ide/idea-IU-183.5912.21 -Didea.config.path=/home/anme/.IntelliJIdea2018.3/config -Didea.plugins.path=/home/anme/.IntelliJIdea2018.3/config/plugins -Djps.log.dir=/home/anme/.IntelliJIdea2018.3/system/log/build-log -Djps.fallback.jdk.home=/home/anme/work/ide/idea-IU-183.5912.21/jre64 -Djps.fallback.jdk.version=1.8.0_152-release -Dio.netty.noUnsafe=true -Djava.io.tmpdir=/home/anme/.IntelliJIdea2018.3/system/compile-server/rest-test_9f529bd1/_temp_ -Djps.backward.ref.index.builder=true -Dkotlin.incremental.compilation=true -Dkotlin.daemon.enabled -Dkotlin.daemon.client.alive.path="/tmp/kotlin-idea-3122889564262438550-is-running" /home/anme/.IntelliJIdea2018.3/system/compile-server
-
-
-
-
-
-anme     15687 25.7  7.6 14209168 2520424 ?    Sl   14:04   2:06 /usr/lib/jvm/jdk-11.0.2/bin/java -agentlib:jdwp=transport=dt_socket,
-address=127.0.0.1:39719,suspend=y,server=n -XX:TieredStopAtLevel=1 -noverify -Dspring.output.ansi.enabled=always
- -Dcom.sun.management.jmxremote -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true
- -javaagent:/home/anme/work/ide/idea-IU-183.5912.21/lib/rt/debugger-agent.jar -Dfile.encoding=UTF-8 de.checkmobile.ReportingApplication
-
-
-
-anme     16561  1.7  0.5 4268808 186920 ?      Sl   14:10   0:02 /usr/lib/jvm/jdk-11.0.2/bin/java -Xmx700m -Djava.awt.headless=true
--Djdt.compiler.useSingleThread=true -Dpreload.project.path=/home/anme/work/workspaces/hertz/hertz-sql-reporting-service
--Dpreload.config.path=/home/anme/.IntelliJIdea2018.3/config/options -Dcompile.parallel=false -Drebuild.on.dependency.change=true
--Djava.net.preferIPv4Stack=true -Dio.netty.initialSeedUniquifier=-4443197636012289056 -Dfile.encoding=UTF-8 -Duser.language=en
- -Duser.country=US -Didea.paths.selector=IntelliJIdea2018.3 -Didea.home.path=/home/anme/work/ide/idea-IU-183.5912.21
- -Didea.config.path=/home/anme/.IntelliJIdea2018.3/config -Didea.plugins.path=/home/anme/.IntelliJIdea2018.3/config/plugins
-  -Djps.log.dir=/home/anme/.IntelliJIdea2018.3/system/log/build-log -Djps.fallback.jdk.home=/home/anme/work/ide/idea-IU-183.5912.21/jre64
-  -Djps.fallback.jdk.version=1.8.0_152-release -Dio.netty.noUnsafe=true -Djava.io.tmpdir=/home/anme/.IntelliJIdea2018.3/system/compile-server/hertz-sql-reporting-service_333954b/_temp_ -Djps.backward.ref.index.builder=true -Dkotlin.incremental.compilation=true -Dkotlin.daemon.enabled -Dkotlin.daemon.client.alive.path="/tmp/kotlin-idea-3122889564262438550-is-running" /home/anme/.IntelliJIdea2018.3/system/compile-server
-
-
-
-
-
-
-
-/usr/lib/jvm/jdk-11.0.2/bin/java
- -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:39563,suspend=y,server=n
- -Djdk.attach.allowAttachSelf  -XX:TieredStopAtLevel=1 -noverify
- -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.liveBeansView.mbeanDomain
- -Dspring.application.admin.enabled=true -javaagent:/home/anme/work/ide/idea-IU-183.5912.21/lib/rt/debugger-agent.jar
- -Dfile.encoding=UTF-8 de.checkmobile.ReportingApplication
-
-java -Djol.tryWithSudo=true -Djol.tryWithSudo=true de.checkmobile.ReportingApplication
+MATCH (v:Vehicle {vin: 'JBPMGPVWXS0947508'}), (lc:Lifecycle {uuid: 'd5624f9a-e352-4aa7-999e-4842e525331b', })
+WITH v, lc, lc.state AS state,
+     {vehicleCoreData: {unitNumber: v.unitNumber, vin: v.vin, model: v.model, modelCode: v.modelCode, licensePlate: v.
+       licensePlate,    carGroup:   v.carGroup, ownerCountry: v.ownerCountry}, vehicleAdditionalData: {vehicleType:      v.
+       vehicleType,
+                                                                                                       manufacturer:     v.
+       manufacturer,
+                                                                                                       gearing:          v.
+       gearing,
+                                                                                                       fuelType:         v.
+       fuelType,
+                                                                                                       colour:           v.
+       color,
+                                                                                                       metallic:         v.
+       metallic,
+                                                                                                       distancePerLiter: v.
+       distancePerLiter,
+                                                                                                       tankCapacity:     v.
+       tankCapacity,
+                                                                                                       activationDate:   v.
+       activationDate}} AS summary
+OPTIONAL MATCH     (lc)-[:HAVING_ACCESSORIES]->(:Accessories)-[:CONTAINING]->(accessories:Accessory)
+WITH v, lc, state, summary,
+     {accessories: (CASE WHEN accessories IS NOT NULL THEN collect(properties(accessories))
+       ELSE null
+       END)} AS accessories
+OPTIONAL MATCH     (lc)-[:HAVING_EQUIPMENTS]->(:Equipments)-[:CONTAINING]->(equipment:Equipment)
+WITH v, lc, state, summary, accessories,
+     {equipment: (CASE WHEN equipment IS NOT NULL THEN collect(properties(equipment))
+       ELSE null
+       END)} AS equipment
+OPTIONAL MATCH     (lc)-[:HAVING_TECHNICAL_FAULTS]->(:Faults)-[:CONTAINING]->(faults:Fault)
+WITH v, lc, state, summary, accessories, equipment,
+     {faults: (CASE WHEN faults IS NOT NULL THEN collect(properties(faults))
+       ELSE null
+       END)} AS faults
+OPTIONAL MATCH    (lc)-[:WAS_IN*]->(wasLc:Lifecycle)
+WITH v, lc, state, summary, accessories, equipment, faults, collect(wasLc) + lc AS collectedLcHistory
+UNWIND (CASE collectedLcHistory WHEN [] THEN [null]
+  ELSE collectedLcHistory
+  END)  AS lcHistory
+OPTIONAL MATCH (lcHistory)-[:HAVING_DAMAGES]->(:Damages)-[:CONTAINING]->(dAct:Damage)<-[:DETECTED]-(:Detected)
+OPTIONAL MATCH (lcHistory)-[:HAVING_DAMAGES]->(:Damages)-[:CONTAINING]->(dRepBefore:Damage)<-[:REPAIRED]-(:Repaired)
+  WHERE dRepBefore.repairedTimestamp IS NULL OR  dRepBefore.repairedTimestamp < lc.timestamp
+OPTIONAL MATCH (lcHistory)-[:HAVING_DAMAGES]->(:Damages)-[:CONTAINING]->(dRepAfter:Damage)<-[:REPAIRED]-(:Repaired)
+  WHERE dRepAfter.repairedTimestamp IS NOT NULL AND dRepAfter.repairedTimestamp >= lc.timestamp
+WITH v, lc, state, summary, accessories, equipment, faults, collect(lcHistory) AS tmp1, dAct, dRepBefore, dRepAfter
+WITH v, lc, state, summary, accessories, equipment, faults, collect(dAct) + collect(dRepAfter) AS dActiveCollected,
+     dRepBefore AS dRepaired, dAct, dRepBefore, dRepAfter
+UNWIND (CASE dActiveCollected WHEN [] THEN [null]
+  ELSE dActiveCollected
+  END)  AS dActive
+WITH v, lc, state, summary, accessories, equipment, faults, {damages: collect(properties(dActive))} AS damages,
+     {damages: collect(properties(dRepaired))} AS repairedDamages, collect(dActive) AS tmp2, collect(dRepaired) AS tmp3,
+     collect(dAct) AS tmp4, collect(dRepBefore) AS tmp5, collect(dRepAfter) AS tmp6
+WITH v, lc, state, summary, accessories, equipment, faults, damages, repairedDamages
+OPTIONAL MATCH (lc)-[:HAVING_DAMAGES]->(:Damages)-[:CONTAINING]->(damage:Damage)
+OPTIONAL MATCH (lc)-[:HAVING_HISTORIC_DAMAGES]->(:Damages)-[:CONTAINING]->(hDamage:Damage)
+WITH collect(damage) + collect(hDamage) AS lcDamagesCollected, v, lc, state, summary, accessories, equipment, faults,
+     damages, repairedDamages
+UNWIND (CASE lcDamagesCollected WHEN [] THEN [null]
+  ELSE lcDamagesCollected
+  END)  AS lcDms
+WITH {damages: collect(properties(lcDms))} AS lcDamages, v, lc, state, summary, accessories, equipment, faults, damages,
+     repairedDamages
+WITH v, lc, state, summary, accessories, equipment, faults, damages, repairedDamages,
+     {damages: (CASE WHEN damage IS NOT NULL THEN collect(properties(damage))
+       ELSE []
+       END)} AS lcDamages
+OPTIONAL MATCH     (lc)-[:HAVING_CONDITIONS]->(:Conditions)-[:CONTAINING]->(fueling:Fueling)
+WITH v, lc, state, summary, accessories, equipment, faults, damages, repairedDamages, lcDamages,
+     properties(fueling) AS fueling
+OPTIONAL MATCH     (lc)-[:HAVING_CONDITIONS]->(:Conditions)-[:CONTAINING]->(mileage:Mileage)
+OPTIONAL MATCH (lc)-[:PREVIOUS_MILEAGE]->(prevMile:Mileage)
+WITH v, lc, state, summary, accessories, equipment, faults, damages, repairedDamages, lcDamages, fueling,
+     properties(mileage) AS mileage, properties(prevMile) AS prevMileage
+OPTIONAL MATCH     (lc)-[:LAST_TYRE]->(tyre:Tyre)
+WITH v, lc, state, summary, accessories, equipment, faults, damages, repairedDamages, lcDamages, fueling, mileage,
+     prevMileage, properties(tyre) AS tyre
+OPTIONAL MATCH     (lc)-[:SIGNED_WITH]->(sig:Signature)
+WITH v, lc, state, summary, accessories, equipment, faults, damages, repairedDamages, lcDamages, fueling, mileage,
+     prevMileage, tyre, properties(sig) AS signature
+OPTIONAL MATCH    (v)-[:LAST_PHOTOS]->(ovPht:Photos)
+WITH v, lc, state, summary, accessories, equipment, faults, damages, repairedDamages, lcDamages, fueling, mileage,
+     prevMileage, tyre, signature, ovPht
+OPTIONAL MATCH    (lc)-[:UNDER]->(ra:RA)
+WITH v, lc, state, summary, accessories, equipment, faults, damages, repairedDamages, lcDamages, fueling, mileage,
+     prevMileage, tyre, signature, ovPht, ra.mileageOut AS tasMileage, properties(ra) AS rentAgr
+OPTIONAL MATCH    (lc)<-[:INFLEETS]-(dn:DeliveryNote)
+WITH v, lc, state, summary, accessories, equipment, faults, damages, repairedDamages, lcDamages, fueling, mileage,
+     prevMileage, tyre, signature, ovPht, tasMileage, rentAgr, properties(dn) AS deliveryNote
+OPTIONAL MATCH    (lc)-[:CHECKIN]->(checkin:Checkin)
+WITH v, lc, state, summary, accessories, equipment, faults, damages, repairedDamages, lcDamages, fueling, mileage,
+     prevMileage, tyre, signature, ovPht, tasMileage, rentAgr, deliveryNote, properties(checkin) AS checkin
+OPTIONAL MATCH (lc)-[:CLOSED_FOR]->(closedPrev:Lifecycle)
+OPTIONAL MATCH (lc)<-[:CLOSED_FOR]-(closedBy:Lifecycle)
+OPTIONAL MATCH (lc)-[:COMPLETED_BY]->(ee:ExternalExecutor)
+OPTIONAL MATCH (lc)-[:COMPLETED_BY]->(:ExternalExecutor)-[:PROVIDE]->(ed:ExternalData)
+WITH v, lc, state, summary, accessories, equipment, faults, damages, repairedDamages, lcDamages, fueling, mileage,
+     prevMileage, tyre, signature, ovPht, tasMileage, rentAgr, deliveryNote, checkin, closedPrev, closedBy,
+     ee.name AS externalExecutorName, properties(ed) AS externalExecutorData
+RETURN state AS state, summary AS summary, fueling AS fueling, mileage AS mileage, prevMileage AS prevMileage,
+       tasMileage AS tasMileage, rentAgr AS ra, tyre AS tyre, accessories AS vehicleAccessories,
+       equipment AS vehicleEquipment, faults AS technicalFaults, damages AS vehicleDamages,
+       repairedDamages AS repairedDamages, lcDamages AS lcDamages, v.overviewPhoto AS overviewPhoto,
+       signature AS signature, lc.documents AS documents, properties(lc) AS lifecycle,
+       ovPht.photos AS lastOverviewPhotos, deliveryNote AS deliveryNote, checkin AS checkin,
+       closedPrev.uuid AS closedPrev, closedBy.uuid AS closedBy, externalExecutorName AS externalExecutorName,
+       externalExecutorData AS externalExecutorData, lc.fnol AS fnol

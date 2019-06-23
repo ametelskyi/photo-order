@@ -30,7 +30,6 @@ public class BoxSearch1 implements IBoxSearch {
 
         while (!boxesQueue.isEmpty()) {
             Box box = boxesQueue.poll();
-            System.out.println("      operate with " + box.getLabel());
             if(box.getHasGoldKey()){
                 return box.getLabel();
             }
@@ -42,7 +41,6 @@ public class BoxSearch1 implements IBoxSearch {
     }
 
     private static String depthFirstSearch(Box box) {
-        System.out.println("start with " + box.getLabel());
         if(box.getHasGoldKey()) return box.getLabel();
 
         if(box.getInnerBoxes() != null) {
@@ -52,7 +50,6 @@ public class BoxSearch1 implements IBoxSearch {
             }
         }
 
-        System.out.println("end with " + box.getLabel());
         return null;
     }
 }

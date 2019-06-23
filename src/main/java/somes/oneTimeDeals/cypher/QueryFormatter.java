@@ -14,7 +14,7 @@ import java.util.stream.Stream;
  * Created by anme on 09.11.16.
  */
 public class QueryFormatter {
-    final static Path path = Paths.get("resources/qwe.cql");
+    final static Path path = Paths.get  ("resources/qwe.cql");
 
     public static void main(String[] args) throws IOException {
 

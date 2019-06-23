@@ -6,8 +6,9 @@ package somes.selfImproving.grok.kata.sortingChoose;
 public class Test {
     public static void main(String[] args) {
         ISortingChoose[] realizations = new ISortingChoose[] {
-                new SortingChoose1(),
-                new SortingChoose2()
+                new SortingChoose1()
+                , new SortingChoose2()
+                , new SortingChoose3()
         };
 
         for (ISortingChoose realization : realizations) {

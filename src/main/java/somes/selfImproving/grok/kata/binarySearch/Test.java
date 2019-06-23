@@ -14,6 +14,7 @@ public class Test {
             new BinarySearch7()
             , new BinarySearch8()
             , new BinarySearch9()
+            , new BinarySearch10()
 
     };
     static int[] ARR = new int[]{3, 5, 86, 259, 456, 999, 2856};

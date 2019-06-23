@@ -10,8 +10,8 @@ import java.util.stream.IntStream;
  */
 public class App {
     public static void main(String[] args) {
-        IntStream.range(0, 40).forEach(i -> {
-            makeLabyrinth(11, 11, false );
+        IntStream.range(0, 10).forEach(i -> {
+            makeLabyrinth(15, 15, false );
             System.out.println();
             System.out.println("---------");
             System.out.println();

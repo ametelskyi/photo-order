@@ -1,6 +1,6 @@
 package somes.selfImproving.grok.kata.sortingChoose;
 
-/**
+/** аа3
  * Created by anme on 14.02.19.
  */
 public class SortingChoose2 implements ISortingChoose {

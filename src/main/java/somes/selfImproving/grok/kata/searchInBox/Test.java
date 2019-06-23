@@ -10,6 +10,8 @@ public class Test {
         IBoxSearch[] searches = new IBoxSearch[]{
                 new BoxSearch1()
                 , new BoxSearch2()
+                , new BoxSearch3()
+                , new BoxSearch4()
 
         };
 
