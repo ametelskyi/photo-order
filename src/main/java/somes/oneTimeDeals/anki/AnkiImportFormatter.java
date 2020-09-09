@@ -7,7 +7,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
@@ -34,16 +33,8 @@ public class AnkiImportFormatter {
         List<FranceWord> words = new ArrayList<>();
         for (int i = 0; i <= rows.size() - 5; i+=5) {
 
-            validate(rows.get(i), rows.get(i+1), rows.get(i+2), rows.get(i+3),  rows.get(i+4));
 
-
-            words.add(FranceWord.builder()
-                    .france(rows.get(i))
-                    .pronunciation(rows.get(i+1).replaceAll(" {2}]", "]"))
-                    .description(rows.get(i+2))
-                    .english(rows.get(i+3))
-                    .examples(rows.get(i+4))
-                    .build());
+            words.add(zipAndValidate(rows, i));
 //            System.out.println(rows.get(i+4));
         }
 
@@ -72,15 +63,34 @@ public class AnkiImportFormatter {
 
     }
 
-    private static void validate(String france, String pronunciation, String descr, String english, String example) {
+    private static FranceWord zipAndValidate(List<String> row, int i) {
+        String france = row.get(i);
+        String pronunciation = isPronunciation(row.get(i+1)) ? row.get(i+1) : row.get(i+2);
+        String descr =         isPronunciation(row.get(i+1)) ? row.get(i+2) : row.get(i+1);
+        String english = row.get(i+3);
+        String example = row.get(i+4);
+
         if(france.trim().length() == 0
         || pronunciation.length() == 0
         || descr.length() == 0
         || english.length() == 0
         || example.length() == 0) throw new RuntimeException("EMPTY FIELD IN: " + france + "!");
-        if(!pronunciation.substring(0, 1).equals("[")) {
+        if(!isPronunciation(pronunciation)) {
             throw new RuntimeException("Looks '" + pronunciation + "' is not pronunciation, check it please! ("+france+")");
         }
+
+        return FranceWord.builder()
+                .france(france)
+                .pronunciation(pronunciation)
+                .description(descr)
+                .english(english)
+                .examples(example)
+                .build();
+
+    }
+
+    private static boolean isPronunciation(String word) {
+        return word.substring(0, 1).equals("[") || word.substring(0,1).equals("/");
     }
 
     private static String toCsv(String str) {
