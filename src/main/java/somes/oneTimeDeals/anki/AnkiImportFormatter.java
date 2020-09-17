@@ -70,6 +70,11 @@ public class AnkiImportFormatter {
         String english = row.get(i+3);
         String example = row.get(i+4);
 
+        pronunciation = pronunciation.replace("  ]", "]");
+        pronunciation = pronunciation.replace("  /", "/");
+        pronunciation = pronunciation.replace(" ]", "]");
+        pronunciation = pronunciation.replace(" /", "/");
+
         if(france.trim().length() == 0
         || pronunciation.length() == 0
         || descr.length() == 0
