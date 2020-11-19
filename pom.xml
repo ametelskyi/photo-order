@@ -7,22 +7,30 @@
     <groupId>qwe</groupId>
     <artifactId>qwe</artifactId>
     <version>0.0.1</version>
+    <packaging>jar</packaging>
+    <name>different-staff</name>
+
+
+
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <release>11</release>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-    <packaging>jar</packaging>
 
-    <name>different-staff</name>
-
+<!--<properties>-->
+    <!--<java.version>11</java.version>-->
+    <!--<maven.compiler.source>${java.version}</maven.compiler.source>-->
+    <!--<maven.compiler.target>${java.version}</maven.compiler.target>-->
+<!--</properties>-->
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/junit/junit -->
@@ -37,7 +45,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.10</version>
+            <version>1.18.8</version>
         </dependency>
 
         <dependency>
@@ -57,6 +65,12 @@
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
             <version>2.9.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.2</version>
         </dependency>
 
     </dependencies>
